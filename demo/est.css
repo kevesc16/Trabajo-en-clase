@@ -1,0 +1,51 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+font-family: 'poppins', sans-serif;
+
+}
+body{
+display: flex ;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+/*background:linear-gradient(to right, #6b35cf);*/
+background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6b35cf, #6b35cf, #6b35cf);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, hsl(246, 39%, 28%), #4b278d, #361672); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.box::before
+{
+    content: ;
+    position: absolute;
+    top: -50%;
+    left: -50% ;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent, #45f3ff);
+    animation: animate 6s linear infinite;
+
+
+
+}
+@keyframes animate{
+
+0%{
+    transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+}
+
+.form-container {
+    border: 1px solid #24266d;
+    padding: 20px;
+  }
+  .box {
+    background-color: #153b74;
+    padding: 20px;
+  }
