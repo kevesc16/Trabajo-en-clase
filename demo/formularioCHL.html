@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="CHL.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chile limpio</title>
+    <script src="CHL.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <div class="box">
+          <div class="form">
+            <h1>Datos Voluntario</h1>
+            <br>
+            <label for="rut">Rut:</label>
+            <input type="number" id="rut" name="xrut">
+            <br>
+            <br>
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="Nombre" name="nom">
+            <br>
+            <br>
+            <label for="ApellidoP">Apellido Paterno:</label>
+            <input type="text" id="ApellidoP" name="apP">
+            <br>
+            <br>
+            <label for="ApelllidoM">Apellido Materno:</label>
+            <input type="text" id="ApellidoM" name="apM">
+            <br>
+            <br>
+            <label for="fecnac">Fecha de nacimiento:</label>
+            <input type="date"  id="fecnac" name="xfec">
+            <br>
+            <br>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="xeda">
+            <br>
+            <br>   
+            <label for="genero">Genero:</label>
+            <select  id="genero"name="xgen">
+              <option selected disabled value="0">Seleccione un genero</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+            <br>
+            <br>
+            <label for="Email">Correo Electronico:</label>
+            <input type="text" id="Email" name="xemail">
+            <br>
+            <br>
+            <label for="numCel">Celular:</label>
+            <input type="text" id="numCel" name="xcel">
+            <br>
+            <br>
+            <label for="prof">Profesión:</label>
+            <input type="text" id="prof" name="xprof">
+            <br>
+            <br>
+            <label for="motivacion">Motivación:</label><br>
+            <textarea   id="moti" name="xmot" cols="30" rows="5"></textarea>
+            <br>
+            <br>
+            <input class="button" type="button" value="Enviar" onclick="validarF()">
+            <br>
+            <br>
+            <input class="button" type="button" value="Crear Carta" onclick="crearC()">
+            <br>
+            <br>
+            <label for="">Presentación:</label><br><br>
+            <textarea readonly class="form-control" name="" id="carta" cols="100" rows="10" style="resize: none;" ></textarea>
+            <!--label for="Promedio">Promedio:</label>
+            <input type="number" id="prome" value="0"-->
+          </div>
+        </div>
+      </div>
+</body>
+</html>
