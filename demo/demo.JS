@@ -14,4 +14,10 @@ function prom_notas(){
     document.getElementById("prome").value = prom;
   }*/
 
+function validarF(){
+
+
+
+}
+
 
