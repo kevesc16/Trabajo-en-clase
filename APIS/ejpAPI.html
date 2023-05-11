@@ -13,10 +13,8 @@
         <input type="button" id="enviar" value="Traer datos">
         
         <table id="characters" style="float:left">
-             
         </table>
-        <table id="owner" style="float:left">
-            
+        <table id="owner" style="float:left">  
         </table>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" 
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
@@ -46,27 +44,25 @@
                             var url = $(this).data("url");
 
                             $.get(url, function(data) {
-                                var colEstatus=`<tr><td>Estatus</td><td>${data.status}</td></tr>`;
-                                var colGenero=`<tr><td>Género</td><td>${data.gender}</td></tr>`;
-                                var owner_url = data.origin.url;
-                                row=`<tr>${colEstatus}${colGenero}</tr>`
+                                 colEstatus=`<td>Estatus</td><td>${data.status}</td></tr>`;
+                                 colGenero=`<tr><td>Género</td><td>${data.gender}</td></tr>`;
+                                 colImg=`<tr><td>Foto</td></tr><td><img src="${data.image}"></td>></tr>`
+                                 owner_url = data.origin.url;
+                                row=`<tr>${colEstatus}${colGenero}${colImg}</tr>`
                                 $("#owner").empty().append(row);
                                 $.get(owner_url, function(owner_data) {
-                                    var colNombre=`<tr><td>Origen</td><td>${owner_data.name}</td></tr>`;
-                                    var colTipo=`<tr><td>Tipo de residencia</td><td>${owner_data.type}</td></tr>`;
+                                     colNombre=`<tr><td>Origen</td><td>${owner_data.name}</td></tr>`;
+                                     colTipo=`<tr><td>Tipo de residencia</td><td>${owner_data.type}</td></tr>`;
                                     row=`<tr>${colNombre}${colTipo}</tr>`
                                     $("#owner").append(row);
                                 });
                             });
                         }); 
                     })
-                })
-                
+                })  
             })
         </script>
-            
-        
-                
+                            
     
 </body>
 
